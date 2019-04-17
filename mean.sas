@@ -41,16 +41,16 @@ class HW_grade;
 by gender;
 run;
 
-*------------------------------------------------------
-option for mean process:
-N, NMISS, MEAN, MEDIAN, STD, STDERR, MAXDEC=N 
-CLM, LCLM, UCLM, 
-MIN, MAX, SUM, VAR, 
-Q1, Q3
-QRANGE
-CV
-SKEWNESS
-KURTOSIS
-T
-PRT
---------------------------------------------------------*;
+*---------------------------------------------------*
+| option for mean process:                          |
+| N, NMISS, MEAN, MEDIAN, STD, STDERR, MAXDEC=N     |
+| CLM, LCLM, UCLM,                                  |
+| MIN, MAX, SUM, VAR,                               |
+| Q1, Q3                                            |
+| QRANGE                                            |
+| CV                                                |
+| SKEWNESS                                          |
+| KURTOSIS                                          |
+| T： T test for total mean=0                       |
+| PRT                                               |
+*---------------------------------------------------*;
