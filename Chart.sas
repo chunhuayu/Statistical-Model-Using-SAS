@@ -69,6 +69,7 @@ run;
 
 proc chart data=emart;
 title "Sum of Sales by Year";
-vbar year /sumvar=sales type=sum discrete;
+vbar year /sumvar=sales type=sum discrete;  
+* TPYE= FREQ PCT CFREQ CPCT SUM MEAN (Frequncy, Percent, Cumulative Freq, Cumulative Pct, sum, mean)
 format sales dollar8.;
 run;
