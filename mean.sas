@@ -10,6 +10,10 @@ Datalines;
 14 F 88  84 C
 ;
 
+* remove obs column from the default print output table
+proc print data=test/ noobs;
+run;
+
 * proc means statement, the column of output table : Variable N Mean Std Dev Minimum Maximum; 
 proc means data=test;
 run;
