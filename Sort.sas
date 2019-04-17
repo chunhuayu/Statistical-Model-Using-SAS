@@ -13,7 +13,7 @@ datalines;
 
 /-----------------------------------------------------------------------------------
   sort the data by gender
-  Remember there are many process in sas using by statement
+  Remember there are many procedure in sas using by statement
   make sure sort the data by the specific variable before using it in other process;
 -------------------------------------------------------------------------------------/
 proc sort data=htwt;
@@ -24,3 +24,10 @@ title "Simple Descriptive Statistics";
 var height weight;
 by gender; * this is the statement that gives the breakdown;
 run;
+
+* An alternative to using a BY statement with proc means in the use of a Class statement;
+proc means data=htwt N mean std maxdec=2;
+Title "the means procedure, using a Class statement";
+Class gender; * you do not have to sort the data when you use a class statement;
+Var Height Weight;
+Run;
