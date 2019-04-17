@@ -40,8 +40,10 @@ run;
 * Proc Freq + Tables statementn can specify the content for each table;
 * table gender has only 1 variable, showing the different levels in the first column, the column is Frequency, Percent, Cumulative
 Frequency, Cumulative percent;
+* In grade Table won't display the percent and cumulative frequency
 * table gender*grade: row is gender, column is grade. the content for each cell is including Frequency, Percent, Cumulative
 Frequency, Cumulative percent;
 Proc Freq Data=example;
-Tables gender Hw_grade grade gender*grade;
+Tables gender Hw_grade gender*grade;
+Tables grade / nocum nopercent;
 run;
