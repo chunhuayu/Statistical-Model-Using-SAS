@@ -10,23 +10,29 @@ datalines;
 7 M 72.4 220
 8 M .    188
 ;
+proc print data=htwt noobs;
+run;
 proc means data=htwt N mean Maxdec=2 std stderr min max clm;
 title "Simple Descriptive Statistics";
 var height weight;
 run;
-proc print data=htwt noobs;
-run;
+
+* Using pro univariate process displays more descriptive statistics;
 proc univariate data=htwt;
 title "More Descritpive Statistics no option";
 var height weight;
 run;
 
-proc univariate data=htwt Normal;
-title "More Descritpive Statistics";
+* add more options in proc univariate process;
+* Normal and plot are the common used as options in proc univariate;
+proc univariate data= htwt Normal plot;
+title "More Descriptive Statistics (sample)";
 var height weight;
 run;
 
-proc univariate data=htwt Normal plot NEXTROBS=3;
-title "More Descritpive Statistics with Normal plot";
+* add histogram statement to display the histogram of height variable;
+proc univariate data=htwt normal plot;
+title "More Descriptive Statistics";
 var height weight;
+histogram height / midpoints=60 To 75 by 5 normal;
 run;
