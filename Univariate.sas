@@ -25,6 +25,8 @@ run;
 
 * add more options in proc univariate process;
 * Normal and plot are the common used as options in proc univariate;
+* Normal option is to display normal test;
+* Plot option is to display stem-leaf, box-plot, QQ-plot;
 proc univariate data= htwt Normal plot;
 title "More Descriptive Statistics (sample)";
 var height weight;
