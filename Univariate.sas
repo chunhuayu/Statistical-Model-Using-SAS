@@ -32,9 +32,11 @@ title "More Descriptive Statistics (sample)";
 var height weight;
 run;
 
-* add histogram statement to display the histogram of height variable;
+* add histogram statement to display the histogram of Height variable;
+* add qqplot statement to display the qqplot of Height variable;
 proc univariate data=htwt normal plot;
 title "More Descriptive Statistics";
-var height weight;
-histogram height / midpoints=60 To 75 by 5 normal;
+var Height weight;
+histogram Height / midpoints=60 To 75 by 5 normal;
+qqplot Height;
 run;
