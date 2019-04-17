@@ -15,3 +15,9 @@ proc chart data= htwt;
 title "Bar chart from Proc Chart";
 Vbar gender;
 run;
+
+proc chart data= htwt;
+title "Bar chart from Proc Chart";
+Vbar height / Midpoints=60 to 74 by 2;
+run;
+
