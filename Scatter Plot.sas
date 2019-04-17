@@ -25,7 +25,7 @@ run;
 proc plot data=htwt;
 title "Separate Plots by Gender";
 By Gender;
-Plot Weight* Height;             * y axis ~ x axis ;
+Plot Weight* Height;             * y axis=Weight ~ x axis=Height ;
 Run;
 
 proc plot data=htwt;
