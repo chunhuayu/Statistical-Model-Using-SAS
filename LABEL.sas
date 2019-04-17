@@ -1,3 +1,4 @@
+* LABEL STATEMENT is in the data step;
 DATA QUEST;
 input ID        $ 1-3
       AGE         4-5
