@@ -10,12 +10,13 @@ Datalines;
 14 F 88  84 C
 ;
 
-* remove obs column from the default print output table
+* option= noobs, remove obs column from the default print output table;
 proc print data=test/ noobs;
 run;
 
 * proc means statement, the column of output table : Variable N Mean Std Dev Minimum Maximum; 
-proc means data=test;
+* option=noprint, do not display the mean table;
+proc means data=test / noprint;
 run;
 
 * specify the variables of output table: exam1 and exam2;
@@ -26,4 +27,16 @@ run;
 * specify the column of output table: N, mean, standard deviation, standard error. Also, specify the decimal point digit is 1;
 proc means data=test N mean std stderr maxdec=1;
 var exam1 exam2;
+run;
+
+* sort gender in increasing order, for qualitative variable, the increasing order is based on the alphabet;
+proc sort data=test;
+by gender;
+run;
+
+* proc mean process has var, class, by statement. As for the variables in by statement, it should be sorted in advanced;
+proc means data=test N mean std STDERR maxdec=1;
+var exam1 exam2;
+class HW_grade;
+by gender;
 run;
