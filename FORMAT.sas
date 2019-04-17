@@ -1,25 +1,28 @@
 PROC FORMAT;
 VALUE $SEXFMT    '1'= 'Male'
                  '2'= 'Female'
-              Other = 'Miscoded'
+              Other = 'Miscoded';
+	      
 VALUE $RACE      '1'= 'White'
                  '2'= 'African AM.'
                  '3'= 'Hispanic'
-				 '4'= 'Other'
+		 '4'= 'Other';
+		 
 VALUE $OSCAR     '1'= 'Single'
                  '2'= 'Married'
-				 '3'= 'Widowed'
-				 '4'= 'Divorced'
+		 '3'= 'Widowed'
+	         '4'= 'Divorced';
+		 
 VALUE $EDUC      '1'= 'High Sch or Less'
                  '2'= 'Two Yr. College'
-				 '3'= 'Four Yr. college'
-				 '4'= 'Graduate Degree'
-VALUE LIKERT     '1'= 'Str Disagree'
-                 '2'= 'Disagree'
-				 '3'= 'No opinion'
-				 '4'= 'Agree'
-				 '5'= 'Str Agree';
-run;
+		 '3'= 'Four Yr. college'
+		 '4'= 'Graduate Degree';
+		 
+VALUE LIKERT     1= 'Str Disagree'
+                 2= 'Disagree'
+		 3= 'No opinion'
+		 4= 'Agree'
+		 5= 'Str Agree';
 
 DATA QUEST;
 input ID        $ 1-3
@@ -50,6 +53,7 @@ DATALINES;
 005682132333
 006651243425
 ;
+
 PROC MEANS DATA=QUEST MAXDEC=2 N MEAN STD CLM;
 TITLE "Questionnaire Analysis";
 VAR AGE;
