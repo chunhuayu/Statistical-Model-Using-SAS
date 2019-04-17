@@ -21,3 +21,8 @@ title "Bar chart from Proc Chart";
 Vbar height / Midpoints=60 to 74 by 2;
 run;
 
+* using Hbar statement replacing Vbar, there is frequency table showing up by the right side of the bar
+proc chart data= htwt;
+title "Bar chart from Proc Chart";
+Hbar height / Midpoints=60 to 74 by 2;  
+run;
