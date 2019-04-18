@@ -32,3 +32,23 @@ proc plot data=htwt;
 title "Separate Plots by Gender";
 Plot Weight* Height=gender;
 Run;
+
+*-------------------------------------------------------------------------------------------*
+data t1;
+   do x=-10 to 10 by 0.1;
+     pdf_n=pdf('normal', x,0,1);
+     pdf_t1=pdf('t', x,1);
+     pdf_t5=pdf('t', x,5);
+     pdf_t30=pdf('t', x,30);
+     output;
+    end;
+run;
+* draw more than one plots in one coordinate by using overlay;
+symbol i=j c=red;    
+symbol2 i=j c=black; 
+symbol3 i=j c=green; 
+symbol4 i=j c=orange;
+proc gplot data=t1;
+plot (pdf_n  pdf_t1 pdf_t5 pdf_t30) *x /overlay;
+run;
+quit;
