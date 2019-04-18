@@ -9,6 +9,8 @@ data t1;
     end;
 run;
 * draw more than one plots in one coordinate by using overlay;
+* (c= colors the whole area including outline and the filled area)
+* i "interpol", j "join"
 symbol i=j c=red;    
 symbol2 i=j c=black; 
 symbol3 i=j c=green; 
@@ -75,3 +77,67 @@ Plot Weight* Height=gender;
 Run;
 
 *-------------------------------------------------------------------------------------------*
+* Set the graphics environment.
+goptions reset=global gunit=pct border cback=white
+         colors=(black blue green red)
+         ftext=swissb htitle=6 htext=3;
+* Create the data set. 
+* STOCKS contains yearly highs and lows for the Dow Jones Industrial Average, and the dates of the high and low values each year.
+data stocks;
+   input year @7 hdate date9. @17 high
+         @26 ldate date9. @36 low;
+   format hdate ldate date9.;
+   datalines;
+1955  30DEC1955  488.40  17JAN1955 388.20
+1956  06APR1956  521.05  23JAN1956  462.35
+...more data lines...
+1994  31JAN1994 3978.36  04APR1994 3593.35
+1995  13DEC1995 5216.47  30JAN1995 3832.08
+;
+
+* Restructure the data so that it defines a closed area. Create two temporary data sets HIGH and LOW with year and value variables;
+data high(keep=year value)
+     low(keep=year value);
+     set stocks;
+     value=high; output high;
+     value=low; output low;
+run;
+
+* Reverse order of the observations in LOW;
+proc sort data=low;
+   by descending year;
+
+* Concatenate HIGH and LOW to create data set AREA by using "set A-dataset B-dataset ;" format statement;
+data area;
+   set high low;
+title1 'Dow Jones Industrial Average';
+title2  h=4 'Highs and Lows From 1955 to 1995';
+footnote j=l ' Source: 1997 World Almanac'
+         j=r 'GR08N05  ';
+
+* Define symbol characteristics. 
+* INTERPOL= specifies a map/plot pattern to fill the polygon formed by the data points. "Can use i=specifies for short"
+* The pattern consists of medium-density parallel lines at 90 degrees. 
+* CV= colors the pattern fill. CO= colors the outline of the area. (If CO= were not used, the outline would be the color of the area.)
+symbol interpol=m3n90
+       cv=red
+       co=blue;
+* Define axis characteristics. ORDER= places the major tick marks at 5-year intervals.
+axis1 order=(1955 to 1995 by 5)
+      label=none
+      major=(height=2)
+      minor=(number=4 height=1)
+      offset=(2,2)
+      width=3;
+axis2 order=(0 to 5500 by 500)
+      label=none
+      major=(height=1.5) offset=(0,0)
+      minor=(number=1 height=1);
+
+* Generate the plot using data set AREA. vref= adding the vertical reference lines;
+proc gplot data=area;
+   plot value*year / haxis=axis1
+                     vaxis=axis2
+                     vref=(1000 3000 5000);
+run;
+quit;
