@@ -9,8 +9,9 @@ DATA CHISQ;
  
  * the weight statement plays an important role in the Chisq test. If remove weight statement, the frequency will be 1 for each cell;
  * the value of the variable which is in weight statement will be used directly in the table;
+ * CMH option can display the odd ratio test including odds ratio and 95% CI for odds ratio
  PROC FREQ DATA=CHISQ;
- TABLES GROUP*OUTCOME /CHISQ;
+ TABLES GROUP*OUTCOME /CHISQ CMH;
  WEIGHT COUNT;
  RUN;
 
