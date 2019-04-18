@@ -13,3 +13,30 @@ DATA CHISQ;
  TABLES GROUP*OUTCOME /CHISQ;
  WEIGHT COUNT;
  RUN;
+
+*---------------------------------------------------------------------*
+data awt5;
+do i= 1 to 10;
+do j= 1 to 2;
+input x @;
+output;
+end;
+end;
+cards;
+3  2.30
+5  1.90
+5   1.00
+7   0.70
+7   0.30
+7   1.00
+8   1.05
+9   0.45
+10  0.70
+11  0.30
+;
+proc print data=awt5;
+run;
+proc freq data=awt5;
+tables i*j /chisq;
+weight x;
+run;
