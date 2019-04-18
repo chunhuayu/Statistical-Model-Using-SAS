@@ -15,6 +15,9 @@ DATA CHISQ;
  RUN;
 
 *---------------------------------------------------------------------*
+* x1=(3,5,5,7,7,7,8,9,10,11)
+* x2=(2.3,1.9,1,0.7,0.3,1,1.05,0.45,0.7,0.3)
+* Null hypothsis chisqure test is there is no relationship between different groups
 data awt5;
 do i= 1 to 10;
 do j= 1 to 2;
