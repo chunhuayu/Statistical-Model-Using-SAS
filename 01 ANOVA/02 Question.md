@@ -1,5 +1,6 @@
 ### Problem 3.10 in Textbook "Design and Analysis of Experiments (Eighth Edition)" by Montgomery
-* 3.10 A product developer is investigating the tensile strength of a new synthetic fiber that will be used to make cloth for men’s shirts. Strength is usually affected by the percentage of cotton used in the blend of materials for the fiber. The engineer conducts a completely randomized experiment with five levels of cotton content and replicates the experiment five times. The data are shown in the following table.
+# 3.10
+* A product developer is investigating the tensile strength of a new synthetic fiber that will be used to make cloth for men’s shirts. Strength is usually affected by the percentage of cotton used in the blend of materials for the fiber. The engineer conducts a completely randomized experiment with five levels of cotton content and replicates the experiment five times. The data are shown in the following table.
 
 |Cotton Weight Percent| Observations|
 |:---:|:---:|
