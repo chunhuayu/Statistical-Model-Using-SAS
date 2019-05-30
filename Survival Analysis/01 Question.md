@@ -1,5 +1,6 @@
 # Problem 7.7 in Textbook
-> _Survival Analysis Techniques for Censored and Truncated Data_ by John P.Klein & Melvin L. Moeschberger
+> _"Survival Analysis Techniques for Censored and Truncated Data"_   
+> by John P.Klein & Melvin L. Moeschberger
 * A study was performed to determine the efficacy of boron neutron capture therapy (BNCT) in treating the therapeutically refractory F98 glioma, using boronophenylalanine (BPA) as the capture agent. F98 glioma cells were implanted into the brains of rats. Three groups of rats were studied. One group went untreated, another was treated only with radiation, and the third group received radiation plus an appropriate concentration of BPA. The data for the three groups lists the death times ( in days) and is given below:
 
 |Untreated| Radiated |Radiated + BPA|
