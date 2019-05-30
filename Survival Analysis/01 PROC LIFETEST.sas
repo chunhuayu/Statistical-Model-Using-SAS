@@ -1,4 +1,7 @@
-/* SAS code for Problem 3 of Chapter 7 hw problems, it is also Prob7.7 in the textbook*/
+/*           textbook "Survival Analysis Techniques for Censored and Truncated Data"              */
+/*                          SAS code for Problem 7.7 in the textbook                              */
+/* Estimating and Compatring Survival Curves with PROC LIFETEST. The KM estimator is the default. */
+
 data control;/*create data set for untreated group*/
 input time censor @@;
 trt='controp';
@@ -23,6 +26,7 @@ grp2=(trt='radbpa');
 title 'Problem 7_7, page 240 --Boron neutron capture therapy';
 title3 'grp1=rad, grp2=radbpa';
 proc print;
+
 /*Compare three groups, plot the survival functions and hazard functions*/
 proc lifetest data=prob7_7 plots=(s,h) graphics;
 time time*censor(0);
