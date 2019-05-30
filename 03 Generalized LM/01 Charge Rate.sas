@@ -32,18 +32,18 @@
   run;
 
   proc glm;
-  model y=tx1 tx2 tx1s tx2s tx12;
+  model y=tx1 tx2 tx1s tx2s tx12; /* full model y= tx1 + tx2 + tx1^2 +tx2^2 + tx1*tx2 */
   run;
 
   proc glm;  /* the F-test for lack of fit */
-  class x1 x2;
-  model y=x1|x2;
+  class x1 x2; /* classify x1 and x2 to be indicator variables*/
+  model y=x1|x2; /* y = x1 + x2 + x1*x2 */
   run;
 
   proc reg; /* test for the first order model */
-  model y=tx1 tx2;
+  model y=tx1 tx2;  /* y= tx1 + tx2 */
   run;
 
-  proc reg;
-  model y=x1 x2;
+  proc reg;  
+  model y=x1 x2; /* y = x1 + x2 */
   run;
