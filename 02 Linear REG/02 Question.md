@@ -15,7 +15,7 @@ Assume that first-order regression model(1.1) is appropriate
    |19.0    |2.0|
    |11.0    |0.0|
    
-  a. Obtain the estimated regression function. Plot the stimated regression function and the data. Does a linear regression function appear to give a good fit here?
-  b. Obtain a point estimate of the expected number of broken ampules when X=1 transfer is made.
-  c. Estimate the increase in the expected number of ampules broken when there are 2 transfers as compared to 1 transfer.
-  d. Verify that your fitted regression line goes through the point (xbar, ybar)
+   * a. Obtain the estimated regression function. Plot the stimated regression function and the data. Does a linear regression function appear to give a good fit here?
+   * b. Obtain a point estimate of the expected number of broken ampules when X=1 transfer is made.
+   * c. Estimate the increase in the expected number of ampules broken when there are 2 transfers as compared to 1 transfer.
+   * d. Verify that your fitted regression line goes through the point (xbar, ybar)
