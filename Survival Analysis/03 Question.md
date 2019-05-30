@@ -1,0 +1,2 @@
+# Example 7.9 in Page 224
+* A clinical trial of chemotherapy against chemotherapy combined with radiotherapy in the treatment of locally unresectable gastric cancer was conducted by the Gastrointestinal Tumor Study Group (1982). In this trial, forty-five patients were randomized to each of the two arms and followed for about eight years. The data, found in Stablein and Koutrou- velis (1985), is as follows:
