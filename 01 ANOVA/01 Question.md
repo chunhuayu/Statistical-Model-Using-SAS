@@ -1,4 +1,4 @@
-
+### Problem 3.26 in Textbook "Design and Analysis of Experiments (Eighth Edition)" by Montgomery
 # 3.26
 * Three brands of batteries are under study. It is suspect- ed that the lives (in weeks) of the three brands are different. Five randomly selected batteries of each brand are tested with the following results:
 
