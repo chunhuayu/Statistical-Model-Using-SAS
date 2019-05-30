@@ -16,6 +16,6 @@
  |28 |32 |42(Censored obs)|
  |30 |35(Censored obs) |42(Censored obs)|d
  
-    * a) Compare the survival curves for the three groups.
-    * b) Perform pairwise tests to determine if ther is any difference in survial between pairs of groups.
-    * c) There is priori evidence that, if there is a difference in survival, there should be a natural ordering, namely, untreated animals will have the worst survial, radiated ratss will have slightly improved survival, and the radiated ratss + BPA should have the test survival. Perform the test for trend which would test this ordered hypothesis.
+   * a) Compare the survival curves for the three groups.
+   * b) Perform pairwise tests to determine if ther is any difference in survial between pairs of groups.
+   * c) There is priori evidence that, if there is a difference in survival, there should be a natural ordering, namely, untreated animals will have the worst survial, radiated ratss will have slightly improved survival, and the radiated ratss + BPA should have the test survival. Perform the test for trend which would test this ordered hypothesis.
