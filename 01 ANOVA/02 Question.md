@@ -3,13 +3,13 @@
 
 |Cotton Weight Percent| Observations|
 |:---:|:---:|
-|15 |  7  7 15 11  9|
+|15 |  7   7  15 11   9|
 |20 | 12 17 12 18 18|
 |25 | 14 19 19 18 18|
 |30 | 19 25 22 19 23|
-|35 |  7 10 11 15 11|
+|35 |  7  10 11 15 11|
 
 
-   * a)Is there evidence to support the claim that cotton con- tent affects the mean tensile strength? Use 􏰐 􏰂 0.05.
-   * b)Use the Fisher LSD method to make comparisons between the pairs of means. What conclusions can you draw?
+   * a) Is there evidence to support the claim that cotton con- tent affects the mean tensile strength? Use 􏰐 􏰂 0.05.
+   * b) Use the Fisher LSD method to make comparisons between the pairs of means. What conclusions can you draw?
    * c) Analyze the residuals from this experiment and com- ment on model adequacy.
