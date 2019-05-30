@@ -1,4 +1,4 @@
-/*SAS code for problem 2 in Chapter 7, it is actually Problem 7.6 on page 240 */
+/*SAS code for problem 7.6 on page 240 */
 data azt;
 input time censor @@;
 trt='azt	';
