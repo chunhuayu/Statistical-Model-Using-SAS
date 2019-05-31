@@ -1,3 +1,23 @@
+/**************************************************************************
+ch13-patient-nonlinear.sas
+Textbook: Applied Linear Statistical Model
+Data from Kutner et al. (5th), p.515
+A hospital  administrator wished  to develop  a regression  model  for  predicting the degree
+of long-term  recovery  after discharge  from  the hospital  for severely  injured patients. 
+The predictor variable  (X)  is number  of days of  hospitalization (X), 
+The response variable (Y) is a prognostic  index for  long-term  recovery,  with large values of e index 
+reflecting a good prognosis.  
+
+Data for  15 patients (n) were studied  and are presented Table 13.1. 
+
+A scatter  plot of the data  is shown  in Figure 13.2 and is nonlinear.  
+
+Related earlier studies found the relationship between X and Y is as follows
+
+y=a0*exp(a1*X)+e, where a and b are unknown parameters.
+
+We also compare this model with a model of ln(Y)=b0+b1*X+e
+****************************************************************************/
 data patient;
 input prog days;
 lnprog=log(prog);
