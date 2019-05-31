@@ -74,7 +74,7 @@ plot wt*race=sex;
 run;
 proc reg data=heart;
 model wt=x1 x2 x12;
-model wt=x1 x2;
+model wt=x1 x2; /* Test for reduced model */
 model wt=x1 x12;
 model wt=x2 x12;
 model wt=x2; 
