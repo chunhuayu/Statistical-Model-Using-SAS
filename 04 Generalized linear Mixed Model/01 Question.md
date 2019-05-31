@@ -1,4 +1,4 @@
-### Problem 13.8 from Textbook 
+### Problem 13.8 from Textbook "Design and Analysis of Experiments (Eighth Edition)" by Montgomery
 # 13.8
 * In problem 5.8, suppose that there are only four machines of interest, but the operators were selected at random.
    * (a) What type of model is appropriate?
