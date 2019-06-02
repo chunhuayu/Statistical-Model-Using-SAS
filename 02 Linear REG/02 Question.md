@@ -3,9 +3,9 @@
 * A substance used in biological and medical reserch is shipped by airfreight to users in cartons of 1000 ampules. the data below, involving 10 shipments, were collected on the number of times the carton was transferred from one aircraft to another over the shipment route (X) and the number of ampules found to be broken upon arrival (Y)
 Assume that first-order regression model(1.1) is appropriate
   
-  |Y |      X|
+  |Y |X|
   |:---:|:---:|
-|   16.0|    1.0|
+  |16.0|    1.0|
  |   9.0 |   0.0|
   | 17.0 |  2.0|
    |12.0  |  0.0|
